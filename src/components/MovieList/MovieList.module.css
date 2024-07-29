@@ -1,0 +1,31 @@
+.movieList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.movieItem {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+}
+
+.movieLink {
+    color: #333;
+    display: block;
+    text-decoration: none;
+}
+
+.moviePoster {
+    width: 100%;
+    height: auto;
+}
+
+.movieItem h3 {
+    margin: 10px;
+    font-size: 16px;
+}

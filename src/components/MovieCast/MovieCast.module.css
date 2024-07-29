@@ -1,0 +1,45 @@
+.castContainer {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.castHeader {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.castList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.castItem {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+}
+
+.castItem img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #eee;
+}
+
+.castItem p {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.castItem p b {
+    font-weight: bold;
+}
