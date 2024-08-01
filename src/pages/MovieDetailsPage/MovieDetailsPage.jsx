@@ -1,4 +1,4 @@
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect, useRef, Suspense } from 'react';
 import { useParams, useLocation, Link, Outlet } from 'react-router-dom';
 import { fetchMovieDetails } from '../../movies-api';
 import css from './MovieDetailsPage.module.css';
@@ -7,6 +7,8 @@ export default function MovieDetailsPage() {
   const { movieId } = useParams();
   const location = useLocation();
   const [movie, setMovie] = useState(null);
+
+  const backLink = useRef(location.state?.from ?? '/movies');
 
   useEffect(() => {
     const fetchMovie = async () => {
@@ -25,7 +27,7 @@ export default function MovieDetailsPage() {
   return (
     <>
       <button className={css.backButton}>
-        <Link to={location?.state?.from ?? '/movies'}>Go back</Link>
+        <Link to={backLink.current}>Go back</Link>
       </button>
       <main className={css.detailsPage}>
         <h1 className={css.movieTitle}>{movie.title}</h1>
